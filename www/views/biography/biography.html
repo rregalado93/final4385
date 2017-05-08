@@ -1,0 +1,17 @@
+<ion-view view-title="Biography">
+    <ion-content>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="test">
+        </label>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="speaker in speakers | filter:test" type="item-text-wrap" href="#/tabs/detailBiography/{{speaker.speakerId}}">
+                <img ng-src="{{speaker.picture}}">
+                <h2>{{speaker.speakerBios.firstName}} {{speaker.speakerBios.lastName}}</h2>
+                <h4>{{speaker.speakerBios.affiliation}}</h4>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view view-title="Home">
+    <ion-content class="cards-bg">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="test">
+        </label>
+
+        <div class="card">
+            <div class="item item-divider">
+                Message Board
+            </div>
+        </div>
+
+        <div class="list card" ng-repeat="message in messages">
+
+            <div class="item item-avatar-left">
+                <img src="{{message.photo}}">
+                <h2>{{message.title}}</h2>
+                <p>{{message.dateTime}}</p>
+            </div>
+
+            <div class="item item-body">
+                <h3>{{message.category}}</h3>
+                <p>{{message.messageText}} </p>
+                <a href="{{message.link}}" class="button">Link</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
